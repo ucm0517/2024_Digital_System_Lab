@@ -3,9 +3,13 @@ This repository contains hands-on lab assignments from the Digital System Design
 All projects are written in Verilog HDL and cover fundamental topics such as combinational and sequential logic circuits, finite state machines, counters, and a stopwatch project using 7-segment displays.
 
 📁 Directory Structure
+
 Digital System Lab/
+
 ├── CH0 ~ CH5-2         # Chapter-based lab exercises (MUX, adder, FSM, etc.)
+
 ├── StopWatch/          # Verilog-based stopwatch project with 7-segment display
+
 └── Includes testbenches (tb_*.v) for most modules
 
 ⚙️ Development Environment
