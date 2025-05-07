@@ -1,0 +1,14 @@
+`timescale 1ns/100ps  #1ns, 만약 100이라면 100ns
+module half_adder_tb ;
+    reg rA, rB;  //와이어 선언 안해도 verilog에선 선언 안한 부분을 다 와이어로 자동으로 설정
+    wire wSum, wCout  // 정상적인 경우는 이렇게 선언해주어야 함.
+
+    half_adder U0(rA, rB, wSum, wCout);
+    initial begin   //딱 한번만 실행, 그 다음 마지막 실행인 rA = 0; rB = 0; 이 그대로 유지
+        rA = 0; rB = 0;
+        #100 rA = 1;
+        #100 rA = 0; rB = 1;
+        #100 rA = 1;
+        #100 rA = 0; rB = 0;
+    end
+endmodule
